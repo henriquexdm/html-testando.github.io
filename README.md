@@ -1,2 +1,3 @@
-# Codegos
-Some codes that I've done
+# Códegos
+
+Alguns códigos que eu fiz.
