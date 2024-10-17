@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascrpit</title>
+</head>
+
+<body>
+
+    <div> <!--Título-->
+        <h1 class="titulo1">Java<span class="script">script</span><span class="titulo2"> <br>(Texto com as cores do Java (^ ^) )</span></h1>
+        
+        <style>
+            .titulo1 {
+                text-align: center;
+                color: rgb(83, 91, 151);
+            }
+
+            .script {
+                color: rgb(199, 56, 56)
+            }
+
+            .titulo2 {
+                color: black;
+                font-size:medium;
+            }
+        </style>
+
+        
+    </div>
+
+    <div> <!--Páginas-->
+        <h2>Páginas:</h2>
+        <a href="um site aí.html"> Página inicial</a>
+        <br>
+        <a href="sobre mim.html"> Sobre mim</a>
+        <br>
+
+        <hr>
+    </div>
+        
+    <div> <!--Introdução-->
+        <h2>Introdução</h2>
+        <p>Nessa aba possui alguns testes de Javascript no HTML.</p>
+
+        <hr>
+    </div>
+
+    <div> <!--Teste de texto-->
+        <h2>Teste de texto</h2>
+        <p id="textoescrito"></p>
+        <p id="negrito"></p>
+
+        <script>
+            document.getElementById("textoescrito").innerHTML = "Olá, mundo! Primeira vez digitando texto usando Javascript.";
+            document.getElementById("negrito").innerHTML = "O texto pode ser destacado igual o HTML, como o comando de <b>Negrito</b>. &lt;b&gt;&lt;/b&gt; <br><br>Também é possível quebrar linhas a vontade. &ltbr&gt"
+        </script>
+
+        <hr>
+    </div>
+
+    <div> <!--Interação com botões-->
+        <h2>Interação com botões</h2>
+        <p>Aqui está alguns testes de botões usando Javascript.</p>
+        <br>
+
+        <div> <!--Sobrescrever-->
+            <h3>Sobrescrever</h3>
+            <p id="sobrescrever">Esse texto será sobrescrito após pressionar o botão abaixo.</p>
+
+            <button type="button" onclick="troca1()">Clique aqui para sobrescrever o texto</button>
+                
+            <script>
+                function troca1() {
+                    document.getElementById("sobrescrever").innerHTML = "Texto sobrescrito com sucesso. (Atualize a página para resetar)";
+                }
+            </script>
+                
+            <br><br><br>
+        </div>
+
+        <div> <!--Alternar entre duas palavras-->
+            <h3>Alternar entre duas palavras</h3>
+            <p id="alternar">Primeira forma</p>
+
+            <button type="button" onclick="troca2()">Troca de forma</button>
+
+            <script>
+                function troca2() {
+                    var trocado1 = document.getElementById("alternar");
+
+                    if (trocado1.innerHTML === "Primeira forma") {
+                        trocado1.innerHTML = "Segunda forma";
+                    } else {
+                        trocado1.innerHTML = "Primeira forma";
+                    }
+                }
+
+            </script>
+
+            <br><br><br>
+        </div>
+
+        <div> <!--Alternar entre uma série de palavras-->
+            <h3>Alternar entre uma série de palavras</h3>
+            <p id="jogosdeluta">Tekken</p>
+
+            <button type="button" onclick="troca3()">Alternar palavra</button>
+
+            <script>
+                const palavras = ["Tekken", "Guilty Gear", "Street Fighter", "The King of Fighters"];
+                let index = 1;
+
+                function troca3() {
+                    const trocado2 = document.getElementById("jogosdeluta");
+                    trocado2.innerHTML = palavras[index];
+                    index = (index + 1) % palavras.length;   
+                }
+                    
+            </script>
+
+            <br><br><br>
+        </div>
+
+        <div> <!--Mostrar uma imagem-->
+            <h3>Mostrar uma imagem</h3>
+            <p>Será que é possível mostrar uma imagem com um clique? Vamos ver.</p>
+
+            <button id="botaoImagem" onclick="mostrarImagem()">Clique aqui para mostrar uma imagem</button>
+            <br><br>
+            <img id="imagemExemplo" src="img/memes/gatinho explodindo.gif" width="200">
+
+            <style>
+                #imagemExemplo {
+                    display: none;
+                }
+            </style>
+
+            <script>
+                function mostrarImagem() {
+                    var imagem = document.getElementById("imagemExemplo");
+                    var botao = document.getElementById("botaoImagem");
+
+                    if (window.getComputedStyle(imagem).display === "none") {
+                        imagem.style.display = "block";
+                        botao.textContent = "Esconder";
+                    } else {
+                        imagem.style.display = "none";
+                        botao.textContent = "Clique aqui para mostrar uma imagem";
+                    }
+                }
+            </script>
+
+        </div>
+
+        <hr>
+    </div>
+
+    <div> <!--Horas atuais-->
+        <h2>Data e hora</h2>
+        <p id="Horas"></p>
+        <p id="Data"></p>
+        <p id="DataPorExtenso"></p>
+        
+        <div> <!--Horas-->
+            <script> 
+                function atualizarHora() {
+                const tempo = document.getElementById('Horas');
+                const agora = new Date();
+                const horas = agora.getHours().toString().padStart(2, '0');
+                const minutos = agora.getMinutes().toString().padStart(2, '0');
+                const segundos = agora.getSeconds().toString().padStart(2, '0');
+                const tempoString = `${horas}:${minutos}:${segundos}`;
+                tempo.textContent = tempoString;
+                }
+
+                setInterval(atualizarHora, 500);
+                atualizarHora();
+            </script>
+        </div>
+
+        <div> <!--Data-->
+            <script>
+                function atualizarDia() {
+                    const diaSemana = ['domingo', 'segunda-feira', 'terça-feira','quarta-feira',
+                    'quinta-feira', 'sexta-feira', 'sábado'
+                    ];
+
+                    const mesAno = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
+                    'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'
+                    ];
+
+                    const dataAtual = new Date();
+                    const dia = String(dataAtual.getDate()).padStart(2, '0');
+                    const mes = String(dataAtual.getMonth() + 1).padStart(2, '0');
+                    const ano = dataAtual.getFullYear();
+                    const dataFinal = `${dia}/${mes}/${ano}`;
+                    document.getElementById('Data').innerHTML = dataFinal
+                }
+                atualizarDia();
+            </script>
+        </div>
+
+        <div> <!--Data por extenso-->
+            <script>
+                function atualizarPorExtenso() {
+                    const dataAtual2 = new Date();
+                    
+                    const diaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira','Quarta-feira',
+                    'Quinta-feira', 'Sexta-feira', 'Sábado'];
+
+                    const mesAno = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+
+                    const dsemana = diaSemana[dataAtual2.getDay()];
+                    const dia2 = dataAtual2.getDate();
+                    const mes2 = mesAno[dataAtual2.getMonth()];
+                    const ano2 = dataAtual2.getFullYear();
+
+                    const dataFinal2 = `${dsemana}, ${dia2} de ${mes2} de ${ano2}`;
+                    document.getElementById('DataPorExtenso').innerHTML = dataFinal2;
+                }
+                atualizarPorExtenso();
+            </script>
+        </div>
+        <br>
+        <p>Minha nossa Senhora, sincronizar o relógio e a data é muito mais complicado do que eu pensava...</p>
+
+        <hr>
+    </div>
+
+</body>
+
+</html>

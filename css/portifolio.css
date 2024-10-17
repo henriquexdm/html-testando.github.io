@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.minha-obra {
+    text-align: center;
+}
+
+.touhou {
+    text-align: center;
+}
+
+.cenarios {
+    text-align: center;
+}
+
+.container-paginas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.paginas-url {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 90px;
+}
+
+.paginas-url a {
+    text-decoration: none;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+.container-imagens-minhaobra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 1vw; 
+}
+
+.container-imagens-touhou {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 1vw; 
+}
+
+.container-imagens-cenarios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 1vw; 
+}
+
+.imagem {
+    width: 10px;
+    height: auto;
+}
+
+.imagem img {
+    width: 350px;
+    height: auto;
+    border: 10px solid black;
+    flex-grow: 1;
+}
+
+.imagem-retrato {
+    width: 10px;
+    height: auto;
+}
+
+.imagem-retrato img {
+    width: 450px;
+    height: auto;
+    border: 10px solid black;
+    flex-grow: 1;
+}
+
+.descricao {
+    margin-top: 12px;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+    width: 350px;
+}
+
+.descricao-retrato {
+    margin-top: 12px;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+    width: 450px;
+}
