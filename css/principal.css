@@ -1,0 +1,39 @@
+html, body, .conteudo {
+    height: 100%;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.opcoes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.botao {
+    width: 300px;
+    height: 50px;
+    background-color: rgb(185, 185, 185);
+    border: 2px solid black;
+    border-radius: 0%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.botao a {
+    font-size: 25px;
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
