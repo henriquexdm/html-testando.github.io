@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes de HTML</title>
+</head>
+
+<body>
+
+    <div class="maintitulo"> <!--Título-->
+        <h1 class="titulo1">Testes de HTML</h1>
+        <h3>Obs: Possui algumas coisas zoadas, não se incomode, por favor.</h3>
+        <p>Páginas:</p><br>
+            <a href="">Página inicial</a>
+            
+            <a href="">Javascript</a>
+            
+            <a href="">Portifólio</a>
+            
+            <a href="">Linktree</a>
+            <br><br>
+            <p>Ai minha <b>vuoida</b>.</p>
+            <p>Num sei fazer um site.</p>
+        <hr>
+
+        <style>
+            .titulo1 {
+                text-align: center;
+            }
+
+            .maintitulo a {
+                text-decoration: none;
+                color: black;
+                margin-right: 20px;
+                background-color: rgb(226, 226, 226);
+                border: 2px solid black;
+                padding: 10px;
+                
+            }
+
+        </style>
+
+    </div>
+
+    <div> <!--Título e subtítulo pra cada <h>-->
+        <h2>Outro título em baixo</h2>
+            <p>Tem título se subtítulo para cada &lt;h&gt;.</p>
+        <hr>
+    </div>
+
+    <div> <!--Japonês e quebra de linha-->
+        <h3>お早うございます</h3>
+            <p>Bom dia em japonês, bom, não sei muito japonês, mas...<br>Sei quebrar linhas!</p>
+        <hr>
+    </div>
+
+    <div> <!--Quase não usa do <h4> pra baixo-->
+        <h4>Os tamanhos variam.</h4>
+            <p>Quase não usa do &lt;h4&gt; pra cima.</p>
+        <hr>
+    </div>
+
+    <div> <!--Teste de destaques de texto-->
+        <h2>Teste de destaques de texto</h2>
+            <p><b>Negrito</b></p>
+            <p><i>Itálico</i></p>
+            <p><u>Sublinhado</u></p>
+            <p><small>Piquinininho</small></p>
+            <p><del>Riscado</del></p>
+            <p>3<sup>2</sup>=6 :D (Potenciação)</p>
+            <p>5<sub>n</sub> (Química?)</p>
+        <hr>
+    </div>
+
+    <div> <!--Elementos de Citação-->
+        <h2>Elementos de citação</h2> 
+            <p>Meu nome é <abbr title="O criador">Henrique</abbr></p>
+            <p><abbr title="Touhou Project">東方プロジェクト</abbr></p>
+            <p><address>Quadra 69</address></p>
+            <p>Elon Musk uma vez disse: <q>Eu quero gozar</q>.</p>
+            <p><blockquote>"Os demônios são seres caóticos que são controlados pelo ódio e pelo sofrimento." ~Desconhecido</blockquote></p>
+            <p>Dracula → <bdo dir="rtl">Dracula</bdo></p>
+        <hr>
+    </div>
+
+    <div> <!--Links-->
+        <h2>Links</h2>
+        <p>Link Absoluto → <a href="https://google.com" target="_blank">https://google.com</a><br>
+        Link Relativo → <a href="sobre mim.html">Sobre mim</a></p>
+        <p>OBS: Para encontrar uma página relativa é o seguinte:</p>
+            <blockquote class="texto-com-fundo">
+                &lt;a href="(pasta)/(arquivo)"&gt;
+            </blockquote>
+        
+        <p>E para voltar a pasta é:</p>
+            <blockquote class="texto-com-fundo">
+                &lt;a href="../(arquivo)"&gt;
+            </blockquote>
+
+        <style>
+            .texto-com-fundo {
+            background-color: rgb(226, 226, 226);
+            border-collapse: collapse;
+            padding: 10px;
+            display: inline-block;
+            }
+
+        </style>
+
+        <hr>
+    </div>
+
+    <div> <!--Imagem-->
+        <h2>Imagens questionáveis</h2>
+        <p>Imagem abosluta:</p>
+        <img src="https://steamuserimages-a.akamaihd.net/ugc/1977673593778539093/C936564183A88ADE64BFA7BFADAAA9DF51EF63BE/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" width="170" height="170">
+        <p>Imagem relativa:</p>
+        <img src="../img/artes originais/Reimu.png" width="248">
+        <p>A primeira foto é um bixo esquisito que aparece nos Nextbot da vida, e a segunda é uma arte que eu fiz da Reimu Hakurei do Touhou Project, ela tem alguns defeitos, mas eu gostei desse desenho.</p>
+        <img src="../img/memes/dreamybull-the-voices.gif" width="200">
+        <p>O comando também aceita gifs :D (Eu se divirto).<br><b>O PODER DE UM DESENVOLVEDOR! POSSO BOTAR QUALQUER ATROCIDADE QUE EU QUISER! MWAHAHAHAHAHAHAHA! (Não vou botar nada criminoso, obviamente).</b></p>
+        <br>
+
+        <p>Teste de transparência: (requer CSS)</p>
+        <div class="image-container">
+            <img src="../img/padrões/homem-com-camisa-azul-fazendo-sinal-minusculo.png" width="250" alt="homem-mostrando-sinal">
+        
+            <style>
+                .image-container {
+                position: relative;
+                width: 250px;
+                height: auto;
+            }
+                .image-container::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 99%;
+                background-color: rgb(51, 51, 51);
+                z-index: 0;
+                border-radius: 0%;
+            }
+                .image-container img {
+                position: relative;
+                z-index: 1;
+            }
+
+            </style>
+        </div>
+
+        <hr>
+    </div>
+
+    <div> <!--Tabelas-->
+        <h2>Tabelas</h2>
+
+        <table>
+            <tr> <!--Informações dos personagens-->
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Classe</th>
+                <th>Espírito</th>
+            </tr>
+            <tr> <!--Youta-->
+                <td>Youta</td>
+                <td>16 anos</td>
+                <td>Espadachim</td>
+                <td>Luz</td>
+            </tr>
+            <tr> <!--Arusa-->
+                <td>Arusa</td>
+                <td>16 anos</td>
+                <td>Ceifador</td>
+                <td>Fogo</td>
+            </tr>
+            <tr> <!--Leah-->
+                <td>Leah</td>
+                <td>16 anos</td>
+                <td>Mago</td>
+                <td>Vento</td>
+            </tr>
+        </table>
+
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align:center;
+            }
+
+            th, td {
+                padding: 1px 10px;
+            }
+
+        </style>
+
+        <hr>
+    </div>
+
+    <div> <!--Listas-->
+        <h2>Listas</h2>
+        <p>Lista não-ordenada:</p>
+        <ul>
+            <li>Continuar a escrever a minha história;</li>
+            <li>Continuar os desenhos;</li>
+            <li>Terminar as atividades e os trabalhos da faculdade para passar de ano;</li>
+            <li>Não se matar.</li>
+        </ul>
+        <p>Lista ordenada:</p>
+        <ol>
+            <li>HTML;</li>
+            <li>CSS;</li>
+            <li>Java.</li>
+        </ol>
+
+        <hr>
+    </div>
+
+    <div> <!--iframes-->
+        <h2>iframes</h2>
+        <iframe src="../pages/iframe.html" width="80%" title="Teste de iframe"></iframe>
+        <p><br>Também pode colocar vídeos do Youtube:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/UVSvTOWnuGk?si=XJ3NRJVemsTDslOO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <hr>
+    </div>
+
+    <div> <!--Audios-->
+        <h2>Audio</h2>
+        <p>Pode colocar link abosluto ou relativo.</p><br>
+        <p>Ragnarok Online OST 30: One Step Closer</p>
+        <audio controls controlsList="nodownload">
+            <source src="https://www.divine-pride.net/media/bgm/30.mp3" type="audio/mpeg" >
+        </audio>
+        <p>Essa música é do antigo campo de treinamento do Ragnarök Online, um MMORPG que eu joguei bastante desde 2017 e parei no início de 2023.</p>
+
+        <hr>
+    </div>
+
+    <div> <!--Teste de Javascript-->
+        <h2>Teste de Javascript</h2>
+        <a href="pages/Javascript.html">Clique nesse link para acessar a página de teste do Javascript.</a>
+        <br><br>
+        <hr>
+    </div>
+
+    <div>
+        <h2>Portifólio básico</h2>
+        <p>O link a seguir leva para um site de portifólio básico, apenas como um teste para saber se pelo menos consigo criar um site decente.</p>
+        <a href="pages/portifoliobasico.html">Link do site</a>
+        <br><br>
+        <hr>
+    </div>
+
+    <div>
+        <p>Mais coisas podem ser adicionadas em algum tempo...</p>
+        <p>"Comece a estudar mais, e NUNCA se compare a ninguém, pois isso só vai te desmotivar."</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi eaque itaque voluptatem eum maiores, sapiente excepturi labore delectus exercitationem asperiores magnam est dolorum! Iure totam, esse dolores dolorem atque provident?</p>
+    </div>
+
+</body>
+
+</html>
+
