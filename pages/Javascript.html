@@ -35,8 +35,11 @@
         <h2>Páginas:</h2>
         <a href="../index.html"> Página inicial</a>
         <br>
-        <a href="sobre mim.html"> Sobre mim</a>
+        <a href="testes">Testes de HTML</a>
         <br>
+        <a href="linktree.html"> Linktree</a>
+        <br>
+        <a href="portifoliobasico.html"> Portifólio</a>
 
         <hr>
     </div>
@@ -119,6 +122,35 @@
                     index = (index + 1) % palavras.length;   
                 }
                     
+            </script>
+
+            <br><br><br>
+        </div>
+
+        <div> <!--Mostrar texto-->
+            <h3>Mostrar texto</h3>
+            <p>Como mostrar e esconder um texto</p>
+
+            <button id="botaoTexto" onclick="mostrarTexto()">Clique aqui para mostrar um texto</button>
+            <p id="textoA">Ai minha vuoida</p>
+
+            <style>
+                #textoA {
+                    display: none;
+                }
+            </style>
+
+            <script>
+                function mostrarTexto() {
+                    var texto = document.getElementById("textoA");
+                    var botao = document.getElementById("botaoTexto");
+
+                    if (window.getComputedStyle(textoA).display === "none") {
+                        texto.style.display = "block";
+                    } else {
+                        texto.style.display = "none";
+                    }
+                }
             </script>
 
             <br><br><br>
@@ -229,6 +261,10 @@
         <p>Minha nossa Senhora, sincronizar o relógio e a data é muito mais complicado do que eu pensava...</p>
 
         <hr>
+    </div>
+
+    <div>
+        <p>Mais a ser adicionado em breve...</p>
     </div>
 
 </body>
